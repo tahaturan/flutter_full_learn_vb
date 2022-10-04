@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_full_learn_vb/101/app_bar.dart';
-import 'package:flutter_full_learn_vb/101/icon_learn.dart';
 
-import '101/color_learn.dart';
+import 'demos/note_demos_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,8 +23,12 @@ class MyApp extends StatelessWidget {
           elevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
+        cardTheme: CardTheme(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        ),
       ),
-      home: const ColorLearn(),
+      home: const NoteDemos(),
     );
   }
 }
