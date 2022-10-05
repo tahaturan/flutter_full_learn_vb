@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'demos/stack_demo_view.dart';
+import '101/stateful_life_cycle_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,14 +23,13 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.light,
           ),
           cardTheme: CardTheme(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           ),
           progressIndicatorTheme: const ProgressIndicatorThemeData(
             color: Colors.white,
             circularTrackColor: Colors.red,
           )),
-      home: const StackDemoView(),
+      home: const StateFulLifeCyleLearn(message: "taha"),
     );
   }
 }
