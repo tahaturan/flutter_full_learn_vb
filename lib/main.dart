@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '101/navigation_learn.dart';
+import '202/tab_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,8 +29,16 @@ class MyApp extends StatelessWidget {
           progressIndicatorTheme: const ProgressIndicatorThemeData(
             color: Colors.white,
             circularTrackColor: Colors.red,
+          ),
+          tabBarTheme: const TabBarTheme(
+            labelColor: Colors.white,
+            indicatorSize: TabBarIndicatorSize.label,
+          ),
+          bottomAppBarTheme: BottomAppBarTheme(
+            shape: const CircularNotchedRectangle(),
+            color: Colors.lightBlue[700],
           )),
-      home: const NavigationLearn(),
+      home: const TabLearn(),
     );
   }
 }

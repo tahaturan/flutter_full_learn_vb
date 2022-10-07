@@ -9,4 +9,5 @@ class LanguageItems {
   static const listViewBuilderLearnAppbarTitle = "List View Builder Learn";
   static const myCollectionsDemosAppbarTitle = "My Collections Demos";
   static const navigationAppbarTitle = "Navigation Learn";
+  static const tabbLearnAppbarTitle = "tabbar  Learn";
 }
