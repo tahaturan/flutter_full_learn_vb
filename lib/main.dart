@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '101/stateful_life_cycle_learn.dart';
+
+import '101/navigation_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
             circularTrackColor: Colors.red,
           )),
-      home: const StateFulLifeCyleLearn(message: "taha"),
+      home: const NavigationLearn(),
     );
   }
 }
