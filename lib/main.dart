@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '202/tab_learn.dart';
+import '202/model_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             shape: const CircularNotchedRectangle(),
             color: Colors.lightBlue[700],
           )),
-      home: const TabLearn(),
+      home: const ModelLearnView(),
     );
   }
 }
