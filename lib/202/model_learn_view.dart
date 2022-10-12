@@ -13,7 +13,7 @@ class _ModelLearnViewState extends State<ModelLearnView> {
   @override
   void initState() {
     super.initState();
-    final user1 = PostModel()
+    final user1 = PostModel1()
       ..userId = 1
       ..body = "vb";
     user1.title = "user1";
@@ -44,6 +44,7 @@ class _ModelLearnViewState extends State<ModelLearnView> {
         onPressed: () {
           setState(() {
             user9 = user9.copyWith(body: "tt");
+            user9.updateBody("taha");
           });
         },
       ),

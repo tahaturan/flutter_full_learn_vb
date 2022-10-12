@@ -10,4 +10,5 @@ class LanguageItems {
   static const myCollectionsDemosAppbarTitle = "My Collections Demos";
   static const navigationAppbarTitle = "Navigation Learn";
   static const tabbLearnAppbarTitle = "tabbar  Learn";
+  static const serviceLearnApparTitle = "Service Learn";
 }
