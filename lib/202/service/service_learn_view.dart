@@ -81,6 +81,10 @@ class _ServiceLearnState extends State<ServiceLearn> {
                 return PostCard(model: _items?[index]);
               },
             ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).buttonTheme.colorScheme?.onPrimary,
+        onPressed: () {},
+      ),
     );
   }
 }
