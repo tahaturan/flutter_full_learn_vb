@@ -1,7 +1,9 @@
-// ignore_for_file: no_leading_underscores_for_local_identifiers
-
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn_vb/202/cache/user_cache/shared_floating_action_button.dart';
+import 'package:flutter_full_learn_vb/202/cache/user_cache/user_items.dart';
+
 import 'package:flutter_full_learn_vb/202/cache/user_model.dart';
+
 import 'shared_manager.dart';
 
 class SharedLearn extends StatefulWidget {
@@ -38,12 +40,25 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
   }
 
   void _onChangeValue(String value) {
+    // ignore: no_leading_underscores_for_local_identifiers
     final _value = int.tryParse(value);
     if (_value != null) {
       setState(() {
         _currentValue = _value;
       });
     }
+  }
+
+  void saveItem() async {
+    changeLoading();
+    await _manager.saveString(SharedKeys.counter, _currentValue.toString());
+    changeLoading();
+  }
+
+  void removeItem() async {
+    changeLoading();
+    await _manager.removeItem(SharedKeys.counter);
+    changeLoading();
   }
 
   @override
@@ -58,7 +73,10 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
       ),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
-        children: [_saveValueButton(), _removeValueButton()],
+        children: [
+          SharedFloatingActionButton(icon: Icons.save_alt_outlined, onPressed: saveItem),
+          SharedFloatingActionButton(icon: Icons.remove_circle_outline, onPressed: removeItem)
+        ],
       ),
       body: Column(
         children: [
@@ -76,38 +94,6 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
     return isLoading
         ? Center(child: CircularProgressIndicator(color: Theme.of(context).scaffoldBackgroundColor))
         : const SizedBox.shrink();
-  }
-
-  FloatingActionButton _saveValueButton() {
-    return FloatingActionButton(
-        onPressed: (() async {
-          changeLoading();
-          await _manager.saveString(SharedKeys.counter, _currentValue.toString());
-          changeLoading();
-        }),
-        child: const Icon(Icons.save));
-  }
-
-  FloatingActionButton _removeValueButton() {
-    return FloatingActionButton(
-        onPressed: (() async {
-          changeLoading();
-          await _manager.removeItem(SharedKeys.counter);
-          changeLoading();
-        }),
-        child: const Icon(Icons.remove));
-  }
-}
-
-class UserItems {
-  late final List<User> users;
-
-  UserItems() {
-    users = [
-      User("vb", "10", "vb10.dev"),
-      User("taha", "100", "vb10.dev"),
-      User("taha2", "103", "vb10.dev"),
-    ];
   }
 }
 
