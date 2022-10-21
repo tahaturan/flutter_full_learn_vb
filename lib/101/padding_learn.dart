@@ -27,8 +27,7 @@ class PaddingLearn extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: ProjectPadding.pagePaddingRightOnly +
-                ProjectPadding.pagePaddingVertical,
+            padding: ProjectPadding.pagePaddingRightOnly + ProjectPadding.pagePaddingVertical,
             child: const Text("data"),
           )
         ],
@@ -42,4 +41,5 @@ class ProjectPadding {
   static const pagePaddinghorizontal = EdgeInsets.symmetric(horizontal: 10);
 
   static const pagePaddingRightOnly = EdgeInsets.only(right: 20);
+  static const customSeetCloseIconPadding = EdgeInsets.only(top: 1, right: 2);
 }

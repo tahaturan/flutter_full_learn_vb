@@ -66,4 +66,5 @@ class _PageViewLearnState extends State<PageViewLearn> {
 
 class DurationUtilty {
   static const durationLow = Duration(seconds: 1);
+  static const durationFast = Duration(seconds: 5);
 }
