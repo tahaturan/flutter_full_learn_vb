@@ -5,6 +5,7 @@ import 'package:flutter_full_learn_vb/202/cache/user_cache/user_items.dart';
 import 'package:flutter_full_learn_vb/202/cache/user_model.dart';
 
 import 'shared_manager.dart';
+import 'package:flutter_full_learn_vb/202/cache/loading_statefull.dart';
 
 class SharedLearn extends StatefulWidget {
   const SharedLearn({Key? key}) : super(key: key);
@@ -94,16 +95,5 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
     return isLoading
         ? Center(child: CircularProgressIndicator(color: Theme.of(context).scaffoldBackgroundColor))
         : const SizedBox.shrink();
-  }
-}
-
-//Generic
-abstract class LoadingStatefull<T extends StatefulWidget> extends State<T> {
-  bool isLoading = false;
-
-  void changeLoading() {
-    setState(() {
-      isLoading = !isLoading;
-    });
   }
 }
