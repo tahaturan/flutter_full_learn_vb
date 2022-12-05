@@ -5,6 +5,8 @@ import 'package:flutter_full_learn_vb/product/global/resoruce_context.dart';
 import 'package:flutter_full_learn_vb/product/global/theme_notifer.dart';
 import 'package:provider/provider.dart';
 
+import '303/lottie_learn.dart';
+
 void main() {
   runApp(MultiProvider(
     providers: [
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
       //       color: Colors.lightBlue[700],
       //     )),
       // * ******************
-      home: const ReqresView(),
+      home: const LottieLenar(),
     );
   }
 }
