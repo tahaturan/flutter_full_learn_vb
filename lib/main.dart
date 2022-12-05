@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn_vb/202/theme/light_theme.dart';
-import 'package:flutter_full_learn_vb/303/reqres_resourse/view/req_res_view.dart';
 import 'package:flutter_full_learn_vb/product/global/resoruce_context.dart';
 import 'package:flutter_full_learn_vb/product/global/theme_notifer.dart';
 import 'package:provider/provider.dart';
