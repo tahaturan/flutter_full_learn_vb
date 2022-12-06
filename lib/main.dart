@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn_vb/303/navigator/navigate_home_detail_view.dart';
+import 'package:flutter_full_learn_vb/303/navigator/navigate_home_view.dart';
 import 'package:flutter_full_learn_vb/product/global/resoruce_context.dart';
 import 'package:flutter_full_learn_vb/product/global/theme_notifer.dart';
+import 'package:flutter_full_learn_vb/product/navigator/navigator_routes.dart';
 import 'package:provider/provider.dart';
 
 import '303/lottie_learn.dart';
@@ -22,35 +25,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: context.watch<ThemeNotifer>().currentTheme,
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: context.watch<ThemeNotifer>().currentTheme,
 
-      // * ********************************
-      // ThemeData.dark().copyWith(
-      //     appBarTheme: const AppBarTheme(
-      //       centerTitle: true,
-      //       backgroundColor: Colors.transparent,
-      //       elevation: 0,
-      //       systemOverlayStyle: SystemUiOverlayStyle.light,
-      //     ),
-      //     cardTheme: CardTheme(
-      //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      //     ),
-      //     progressIndicatorTheme: const ProgressIndicatorThemeData(
-      //       color: Colors.white,
-      //       circularTrackColor: Colors.red,
-      //     ),
-      //     tabBarTheme: const TabBarTheme(
-      //       labelColor: Colors.white,
-      //       indicatorSize: TabBarIndicatorSize.label,
-      //     ),
-      //     bottomAppBarTheme: BottomAppBarTheme(
-      //       shape: const CircularNotchedRectangle(),
-      //       color: Colors.lightBlue[700],
-      //     )),
-      // * ******************
-      home: const LottieLenar(),
-    );
+        // * ********************************
+        // ThemeData.dark().copyWith(
+        //     appBarTheme: const AppBarTheme(
+        //       centerTitle: true,
+        //       backgroundColor: Colors.transparent,
+        //       elevation: 0,
+        //       systemOverlayStyle: SystemUiOverlayStyle.light,
+        //     ),
+        //     cardTheme: CardTheme(
+        //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        //     ),
+        //     progressIndicatorTheme: const ProgressIndicatorThemeData(
+        //       color: Colors.white,
+        //       circularTrackColor: Colors.red,
+        //     ),
+        //     tabBarTheme: const TabBarTheme(
+        //       labelColor: Colors.white,
+        //       indicatorSize: TabBarIndicatorSize.label,
+        //     ),
+        //     bottomAppBarTheme: BottomAppBarTheme(
+        //       shape: const CircularNotchedRectangle(),
+        //       color: Colors.lightBlue[700],
+        //     )),
+        // * ******************
+
+        routes: NavigatorRoutes().items);
   }
 }
